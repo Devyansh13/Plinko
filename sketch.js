@@ -44,7 +44,7 @@ function setup() {
 	}
 
 	for (var h = 60;h<460;h=h+50){
-		plinkos.push(new Plinko(h,135,60))
+		plinkos.push(new Plinko(h,135,10))
 	}
 
 	for (var k = 40;k<480;k=k+50){
@@ -52,12 +52,9 @@ function setup() {
 	}
 
 	for (var l = 60;l<460;l=l+50){
-		plinkos.push(new Plinko(l,255,60))
+		plinkos.push(new Plinko(l,255,10))
 	}
 
-if(frameCount%60===0){
-	particles.push(new Particle(random(width/2-10,width/2+10),10,10));
-}
 	
 
 
@@ -82,6 +79,11 @@ function draw() {
   d7.display();
   dg.display();
   
+
+
+  if(frameCount%20===0){
+	particles.push(new Particle(random(width/2-10,width/2+10),10,10));
+}
 
   for(var i=0;i<plinkos.length;i++){
 	  plinkos[i].display();

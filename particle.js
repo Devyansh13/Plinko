@@ -1,7 +1,7 @@
 class Particle{
     constructor(x, y,r) {
         var options = {
-          isStatic:false,
+            isStatic:false,
             'restitution':0.4,
         }
         this.r=r
@@ -20,7 +20,6 @@ class Particle{
         noStroke();
         fill(this.color)
         ellipseMode(RADIUS);
-        fill("white")
         ellipse(0,0,this.r,this.r);
         pop();
       }
